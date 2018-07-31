@@ -3,8 +3,6 @@ google.charts.load('current', {
 });
 
 google.charts.setOnLoadCallback(drawChart);
-google.charts.setOnLoadCallback(drawAllocationChart);
-google.charts.setOnLoadCallback(drawSemestersChart);
 
 function drawChart() {
   var data = new google.visualization.DataTable();
@@ -71,6 +69,31 @@ function drawAllocationChart() {
     'colors': ['#8AD1C2', '#9F8AD1', '#D18A99', '#BCD18A']
   };
 
-  var chart = new google.visualization.PieChart(document.getElementById('allocations'));
+  var chart = new google.visualization.PieChart(document.getElementById('allocation'));
   chart.draw(data, options);
+}
+
+
+window.onload = function() {
+  // Event listeners for each button: clear all charts, redraw requested one
+  document.getElementById('semester-trigger').addEventListener('click', function() {
+    document.getElementById('semesters').innerHTML = ""
+    document.getElementById('chart_div').innerHTML = ""
+    document.getElementById('allocation').innerHTML = ""
+    drawSemestersChart();
+  })
+
+  document.getElementById('bowling-trigger').addEventListener('click', function() {
+    document.getElementById('semesters').innerHTML = ""
+    document.getElementById('chart_div').innerHTML = ""
+    document.getElementById('allocation').innerHTML = ""
+    drawChart()
+  })
+
+  document.getElementById('allocation-trigger').addEventListener('click', function() {
+    document.getElementById('semesters').innerHTML = ""
+    document.getElementById('chart_div').innerHTML = ""
+    document.getElementById('allocation').innerHTML = ""
+    drawAllocationChart();
+  })
 }
