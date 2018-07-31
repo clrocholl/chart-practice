@@ -13,19 +13,17 @@ function drawChart() {
 
   // Create the data table.
   var data = new google.visualization.DataTable();
-  data.addColumn('string', 'Topping');
-  data.addColumn('number', 'Slices');
+  data.addColumn('string', 'Score Range');
+  data.addColumn('number', 'Games');
   data.addRows([
-    ['Palm Hearts', 1],
-    ['Onions', 1],
-    ['Olives', 1],
-    ['Zucchini', 1],
-    ['Pepperoni', 1]
+    ['0-100', 2],
+    ['100-200', 5],
+    ['200-300', 3]
   ]);
 
   // Set chart options
   var options = {
-    'title': 'What Kinds of Pizza I Ate Last Night',
+    'title': 'Bowling Score Incidences',
     'width': 400,
     'height': 300
   };
