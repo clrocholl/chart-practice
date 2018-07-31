@@ -38,7 +38,8 @@ function drawAllocationChart() {
     'title': 'Each Dollar Donated Goes To',
     'width': 400,
     'height': 300,
-    'pieHole': 0.5
+    'pieHole': 0.5,
+    'colors':['#8AD1C2', '#9F8AD1', '#D18A99', '#BCD18A']
   };
 
   var chart = new google.visualization.PieChart(document.getElementById('allocations'));
