@@ -36,7 +36,8 @@ function drawAllocationChart() {
   var options = {
     'title': 'Bowling Score Incidences',
     'width': 400,
-    'height': 300
+    'height': 300,
+    'pieHole': 0.5
   };
 
   var chart = new google.visualization.PieChart(document.getElementById('allocations'));
