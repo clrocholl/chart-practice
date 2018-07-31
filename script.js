@@ -25,16 +25,17 @@ function drawChart() {
 
 function drawAllocationChart() {
   var data = new google.visualization.DataTable();
-  data.addColumn('string', 'Score Range');
-  data.addColumn('number', 'Games');
+  data.addColumn('string', 'Expense');
+  data.addColumn('number', 'Cents');
   data.addRows([
-    ['0-100', 2],
-    ['100-200', 5],
-    ['200-300', 3]
+    ['Administrative Costs', 4],
+    ['Fundraising', 16],
+    ['Funds Youth Programs', 36],
+    ['Funds Adult Program', 44]
   ]);
 
   var options = {
-    'title': 'Bowling Score Incidences',
+    'title': 'Each Dollar Donated Goes To',
     'width': 400,
     'height': 300,
     'pieHole': 0.5
